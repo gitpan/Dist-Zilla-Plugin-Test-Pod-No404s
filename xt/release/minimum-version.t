@@ -1,12 +1,4 @@
 #!perl
-
-BEGIN {
-  unless ($ENV{RELEASE_TESTING}) {
-    require Test::More;
-    Test::More::plan(skip_all => 'these tests are for release candidate testing');
-  }
-}
-
 #
 # This file is part of Dist-Zilla-Plugin-Test-Pod-No404s
 #
@@ -18,6 +10,7 @@ BEGIN {
 
 use Test::More;
 
-eval "use Test::CPAN::Meta";
-plan skip_all => "Test::CPAN::Meta required for testing META.yml" if $@;
-meta_yaml_ok();
+eval "use Test::MinimumVersion";
+plan skip_all => "Test::MinimumVersion required for testing minimum versions"
+  if $@;
+all_minimum_version_from_metayml_ok();

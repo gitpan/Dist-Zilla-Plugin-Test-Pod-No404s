@@ -1,12 +1,4 @@
 #!perl
-
-BEGIN {
-  unless ($ENV{RELEASE_TESTING}) {
-    require Test::More;
-    Test::More::plan(skip_all => 'these tests are for release candidate testing');
-  }
-}
-
 #
 # This file is part of Dist-Zilla-Plugin-Test-Pod-No404s
 #
@@ -18,6 +10,8 @@ BEGIN {
 
 use Test::More;
 
-eval "use Test::Kwalitee";
-plan skip_all => "Test::Kwalitee required for testing kwalitee"
-  if $@;
+eval 'use Test::Mojibake';
+plan skip_all => 'Test::Mojibake required for source encoding testing'
+    if $@;
+
+all_files_encoding_ok();

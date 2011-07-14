@@ -10,7 +10,7 @@ my %module_build_args = (
     'File::Find' => '0',
     'File::Temp' => '0',
     'Module::Build' => '0.3601',
-    'Test::More' => '0.96'
+    'Test::More' => '0.88'
   },
   'configure_requires' => {
     'Module::Build' => '0.3601'
@@ -20,7 +20,7 @@ my %module_build_args = (
     'Randy Stauner <rwstauner@cpan.org>'
   ],
   'dist_name' => 'Dist-Zilla-Plugin-Test-Pod-No404s',
-  'dist_version' => '1.000',
+  'dist_version' => '1.001',
   'license' => 'perl',
   'module_name' => 'Dist::Zilla::Plugin::Test::Pod::No404s',
   'recommends' => {},

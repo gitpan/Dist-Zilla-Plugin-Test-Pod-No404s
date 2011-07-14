@@ -7,17 +7,18 @@
 # This is free software; you can redistribute it and/or modify it under
 # the same terms as the Perl 5 programming language system itself.
 #
+use strict;
+use warnings;
+
 package Dist::Zilla::Plugin::Test::Pod::No404s;
 BEGIN {
-  $Dist::Zilla::Plugin::Test::Pod::No404s::VERSION = '1.000';
+  $Dist::Zilla::Plugin::Test::Pod::No404s::VERSION = '1.001';
 }
 BEGIN {
   $Dist::Zilla::Plugin::Test::Pod::No404s::AUTHORITY = 'cpan:RWSTAUNER';
 }
 # ABSTRACT: Add release tests for POD HTTP links
 
-use strict;
-use warnings;
 use Moose;
 extends 'Dist::Zilla::Plugin::InlineFiles';
 
@@ -40,7 +41,7 @@ Dist::Zilla::Plugin::Test::Pod::No404s - Add release tests for POD HTTP links
 
 =head1 VERSION
 
-version 1.000
+version 1.001
 
 =head1 SYNOPSIS
 
@@ -96,49 +97,49 @@ in addition to those websites please use your favorite search engine to discover
 
 Search CPAN
 
+The default CPAN search engine, useful to view POD in HTML format.
+
 L<http://search.cpan.org/dist/Dist-Zilla-Plugin-Test-Pod-No404s>
 
 =item *
 
 RT: CPAN's Bug Tracker
 
+The RT ( Request Tracker ) website is the default bug/issue tracking system for CPAN.
+
 L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=Dist-Zilla-Plugin-Test-Pod-No404s>
-
-=item *
-
-AnnoCPAN: Annotated CPAN documentation
-
-L<http://annocpan.org/dist/Dist-Zilla-Plugin-Test-Pod-No404s>
 
 =item *
 
 CPAN Ratings
 
+The CPAN Ratings is a website that allows community ratings and reviews of Perl modules.
+
 L<http://cpanratings.perl.org/d/Dist-Zilla-Plugin-Test-Pod-No404s>
 
 =item *
 
-CPAN Forum
+CPAN Testers
 
-L<http://cpanforum.com/dist/Dist-Zilla-Plugin-Test-Pod-No404s>
+The CPAN Testers is a network of smokers who run automated tests on uploaded CPAN distributions.
 
-=item *
-
-CPANTS Kwalitee
-
-L<http://cpants.perl.org/dist/overview/Dist-Zilla-Plugin-Test-Pod-No404s>
-
-=item *
-
-CPAN Testers Results
-
-L<http://cpantesters.org/distro/D/Dist-Zilla-Plugin-Test-Pod-No404s.html>
+L<http://www.cpantesters.org/distro/D/Dist-Zilla-Plugin-Test-Pod-No404s>
 
 =item *
 
 CPAN Testers Matrix
 
+The CPAN Testers Matrix is a website that provides a visual overview of the test results for a distribution on various Perls/platforms.
+
 L<http://matrix.cpantesters.org/?dist=Dist-Zilla-Plugin-Test-Pod-No404s>
+
+=item *
+
+CPAN Testers Dependencies
+
+The CPAN Testers Dependencies is a website that shows a chart of the test results of all dependencies for a distribution.
+
+L<http://deps.cpantesters.org/?module=Dist::Zilla::Plugin::Test::Pod::No404s>
 
 =back
 
@@ -151,9 +152,9 @@ progress on the request by the system.
 =head2 Source Code
 
 
-L<http://github.com/magnificent-tears/Dist-Zilla-Plugin-Test-Pod-No404s/tree>
+L<http://github.com/rwstauner/Dist-Zilla-Plugin-Test-Pod-No404s>
 
-  git clone git://github.com/magnificent-tears/Dist-Zilla-Plugin-Test-Pod-No404s.git
+  git clone http://github.com/rwstauner/Dist-Zilla-Plugin-Test-Pod-No404s
 
 =head1 AUTHOR
 

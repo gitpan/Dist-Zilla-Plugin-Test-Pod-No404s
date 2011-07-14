@@ -2,9 +2,9 @@
 use strict;
 use warnings;
 
-BEGIN { require 5.006; }
+use 5.006;
 
-use ExtUtils::MakeMaker 6.31;
+use ExtUtils::MakeMaker 6.30;
 
 
 
@@ -14,11 +14,11 @@ my %WriteMakefileArgs = (
   'BUILD_REQUIRES' => {
     'File::Find' => '0',
     'File::Temp' => '0',
-    'ExtUtils::MakeMaker' => '6.31',
-    'Test::More' => '0.96'
+    'ExtUtils::MakeMaker' => '6.30',
+    'Test::More' => '0.88'
   },
   'CONFIGURE_REQUIRES' => {
-    'ExtUtils::MakeMaker' => '6.31'
+    'ExtUtils::MakeMaker' => '6.30'
   },
   'DISTNAME' => 'Dist-Zilla-Plugin-Test-Pod-No404s',
   'EXE_FILES' => [],
@@ -29,7 +29,7 @@ my %WriteMakefileArgs = (
     'Moose' => '0',
     'Test::Pod::No404s' => '0.01'
   },
-  'VERSION' => '1.000',
+  'VERSION' => '1.001',
   'test' => {
     'TESTS' => 't/*.t'
   }

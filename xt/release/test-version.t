@@ -1,12 +1,4 @@
-#!perl
-
-BEGIN {
-  unless ($ENV{RELEASE_TESTING}) {
-    require Test::More;
-    Test::More::plan(skip_all => 'these tests are for release candidate testing');
-  }
-}
-
+#!/usr/bin/perl
 #
 # This file is part of Dist-Zilla-Plugin-Test-Pod-No404s
 #
@@ -15,9 +7,14 @@ BEGIN {
 # This is free software; you can redistribute it and/or modify it under
 # the same terms as the Perl 5 programming language system itself.
 #
+use 5.006;
+use strict;
+use warnings;
 use Test::More;
 
-eval "use Test::Pod 1.41";
-plan skip_all => "Test::Pod 1.41 required for testing POD" if $@;
+eval "use Test::Version 0.04";
+plan skip_all => "Test::Version 0.04 required for testing versions"
+    if $@;
 
-all_pod_files_ok();
+version_all_ok();
+done_testing;
